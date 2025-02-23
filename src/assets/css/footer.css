@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
+
+:root {
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xlg: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.footer {
+    background-color: black;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: x-small;
+}
+.contact{
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: white;
+}
+
+.contact text {
+    text-align: center;
+}
+.footer_logo {
+    padding: 2rem;
+    width: 7%;
+    align-items: center;
+    color: black;
+    filter: invert(1);
+    transform: all 0.1s;
+    transition: transform 0.3s;
+}
+
+.footer_logo :hover {
+    transform: translateY(-5px);
+}
+
+.about a {
+    padding: 2rem;
+    text-decoration: none;
+    background: -webkit-linear-gradient(45deg ,#FF0000, #8EC5FC ,#FC00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: all 0.1s;
+    transition: transform 0.3s;
+}
+
+.about a:hover {
+    background: -webkit-linear-gradient(45deg ,#379BFC , #FFE20D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-5px);
+}
+
+.github {
+    font-size: var(--size-base);
+}
+
+@media (max-width:768px) {
+    .footer_logo {
+        padding: 2rem;
+        width: 25%;
+        align-items: center;
+        color: black;
+        filter:invert(1);
+        transform: all 0.1s;
+        transition: transform 0.3s;
+    }
+
+    .footer_logo :hover {
+        transform: translateY(-5px);
+    }
+    
+    .github {
+        font-size: var(--size-xs);
+    }
+}

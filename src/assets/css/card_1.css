@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
+
+center {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    margin-left: auto;
+    margin-right: auto;
+    height: 470px;
+    max-width: 100%;
+    border-radius: 2rem;
+}
+
+.play {
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--size-lg);
+    padding: 0.5em 1em;
+    background-color: #a4f484;
+    border-radius: 0.375rem;
+    transform: all 0.1s;
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: black;
+}
+
+.play:hover {
+    transform: translateY(-5px);
+    background-color: black;
+    color: #a4f484;
+}
+
+.title {
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.card span {
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-style: normal;
+    font-size: 0.75rem;
+}
+
+.wrapper { 
+    max-width: 1100px; 
+    width: 100%; 
+    position: relative; 
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.wrapper i { 
+    height: 50px; 
+    width: 50px; 
+    background: #a4f484; 
+    text-align: center; 
+    line-height: 50px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    font-size: 1.25 rem; 
+    transform: translateY(-50%); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: all 0.1s;
+    transition: transform 0.3s;
+} 
+
+.wrapper i:hover {
+    transform: translateY(-30px);
+    background-color: black;
+    color: #a4f484;
+}
+  
+.wrapper i:first-child { 
+    left: -22px; 
+  
+} 
+  
+.wrapper i:last-child { 
+    right: -22px; 
+  
+} 
+  
+.wrapper .carousel { 
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: calc((100% / 3) - 12px); 
+    gap: 16px; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth; 
+    scrollbar-width: 0; 
+} 
+  
+.carousel::-webkit-scrollbar { 
+    display: none; 
+} 
+
+.carousel .card { 
+    scroll-snap-align: start; 
+    height: 340px; 
+    list-style: none; 
+    background: #fff; 
+    border-radius: 8px; 
+    display: flex; 
+    cursor: pointer; 
+    width: 98%; 
+    padding-bottom: 15px; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+} 
+  
+.card .img { 
+    background: #fff; 
+    width: 145px; 
+    height: 145px; 
+    border-radius: 50%;
+} 
+  
+.card .img img { 
+    width: 140px; 
+    height: 140px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 4px solid #fff; 
+} 
+  
+.card h2 { 
+    font-weight: 500; 
+    font-size: 1.56rem; 
+    margin: 30px 0 5px; 
+} 
+  
+.card span { 
+    color: #6a6d78; 
+    font-size: 1.31rem; 
+  
+} 
+  
+@media screen and (max-width: 900px) { 
+    .wrapper .carousel { 
+        grid-auto-columns: calc((100% / 2) - 9px); 
+  
+    } 
+} 
+  
+@media screen and (max-width: 600px) { 
+    .wrapper .carousel { 
+        grid-auto-columns: 100%;
+    } 
+    .wrapper { 
+        max-width: 1100px; 
+        width: 100%; 
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+}

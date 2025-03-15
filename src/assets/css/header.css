@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
+
+:root {
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xlg: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+.logo_img {
+    width: var(--size-4xl);
+    height: var(--size-7xl);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--size-2xl);
+    color: #0f172a;
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    gap: 1rem;
+}
+.logo_text {
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-weight: bold;
+    font-style: normal;
+}
+.header {
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header_menu {
+    display: none;
+}
+
+.header_bars {
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+    display: block;
+}
+
+@media (min-width:768px) {
+    .header_menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        gap: 2rem;
+    }
+    
+    .header_link {
+        font-size: var(--size-xs);
+        text-decoration: none;
+        font-family: "Averia Gruesa Libre", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: -0.05rem;
+        transition: color 0.3s;
+        color: black;
+    }
+    
+    .header_link:hover {
+        color: #fee332;
+    }
+    
+    .header_line {
+        border: 1px solid black;
+        padding-top: 1.5rem;
+    }
+
+    .btn {
+        font-family: "Averia Gruesa Libre", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: var(--size-xs);
+        padding: 0.5em 1em;
+        background-color: #a4f484;
+        border-radius: 0.375rem;
+        transform: all 0.1s;
+        transition: transform 0.3s;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .btn:hover {
+        transform: translateY(-5px);
+        background-color: black;
+        color: #a4f484;
+    }
+
+    .header_bars {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header_link {
+        font-size: var(--size-base);
+    }
+
+    .btn {
+        font-size: var(--size-base);
+    }
+    
+}

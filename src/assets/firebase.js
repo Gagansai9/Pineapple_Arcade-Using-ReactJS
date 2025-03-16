@@ -1,22 +1,23 @@
+import { getAuth, GoogleAuthProvider } from "firebase/auth"; // Import authentication modules
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "Your_API_KEY",
-  authDomain: "login-with-firebase-be20e.firebaseapp.com",
-  projectId: "login-with-firebase-be20e",
-  storageBucket: "login-with-firebase-be20e.appspot.com",
-  messagingSenderId: "576172751156",
-  appId: "1:576172751156:web:a243e868294ac8e6570d61"
+
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+// Your web app's Firebase configuration
 
-// Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
+// Initialize Firebase Authentication
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider(); // Google Sign-In Provider
 
+export { app, auth, provider };
